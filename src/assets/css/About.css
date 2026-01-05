@@ -1,0 +1,96 @@
+/* GLOBAL */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ABOUT INTRO */
+.about-intro {
+  background: #ffffff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CTA STRIP */
+.about-cta {
+  background: #1ca39e;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.about-cta button {
+  margin-top: 12px;
+  padding: 10px 22px;
+  border: none;
+  background: #0c3c32;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* WHY CHOOSE */
+.why-choose {
+  background: #1ca39e;
+  padding: 60px 20px;
+  color: #08352c;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+}
+
+/* FEATURE CARDS */
+.feature-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.feature-card {
+  background: #e9fbfa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.feature-card h4 {
+  margin-bottom: 10px;
+}
+
+.feature-card ul {
+  padding-left: 18px;
+}
+
+/* STAND FOR / VISION / ADVANTAGE */
+.stand-for,
+.vision,
+.advantage {
+  background: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.advantage {
+  background: #1ca39e;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
