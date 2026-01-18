@@ -1,0 +1,47 @@
+.login-bg {
+  background: url("/assets/login-bg.jpg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay */
+.login-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(32, 178, 170, 0.75);
+  z-index: 1;
+}
+.login-bg > * {
+  position: relative;
+  z-index: 2;
+}
+.login-left .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 40, 90, 0.75);
+}
+
+.login-left .content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  margin-top: auto;
+  max-width: 400px;
+}
+
+.dot {
+  width: 24px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dot.active {
+  background: #fff;
+}

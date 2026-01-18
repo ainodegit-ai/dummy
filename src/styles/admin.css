@@ -1,0 +1,32 @@
+.admin-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.summary-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.summary-value {
+  font-size: 16px;
+  font-weight: 600;
+}

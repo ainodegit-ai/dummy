@@ -1,0 +1,280 @@
+/* Make modal backdrop cover entire screen */
+.modal-backdrop.show {
+  z-index: 5000 !important;
+  background: rgba(0,0,0,0.6) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Modal itself stays on top */
+.modal.show {
+  z-index: 6000 !important;
+}
+
+
+
+/* ===========================================================
+   FIX BOOTSTRAP MODAL (must be on top of fixed sidebar/topbar)
+=========================================================== */
+.modal-backdrop {
+  z-index: 3000 ;
+}
+
+.modal {
+  z-index: 4000 ;
+}
+
+/* ===========================================================
+   PAGE HEADER
+=========================================================== */
+.mh-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.mh-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Search + Add button container */
+.mh-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search bar */
+.mh-search {
+  padding: 8px 12px;
+  width: 260px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.mh-search:focus {
+  border-color: #00a9ff;
+  box-shadow: 0 0 4px rgba(0, 169, 255, 0.4);
+}
+
+/* Add button */
+.mh-add-btn {
+  padding: 10px 18px;
+  background: #00a9ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.mh-add-btn:hover {
+  background: #008cd6;
+}
+
+/* ===========================================================
+   TABLE WRAPPER
+=========================================================== */
+.mh-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow-x: auto; /* MOBILE SCROLL */
+}
+
+/* ===========================================================
+   TABLE
+=========================================================== */
+.mh-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* prevents table breaking */
+}
+
+/* table header */
+.mh-table thead {
+  background: #f5f7fa;
+}
+
+.mh-table th {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+}
+
+/* table rows */
+.mh-table td {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+}
+
+.mh-table tr:hover {
+  background: #f9fbff;
+}
+
+/* ===========================================================
+   ACTION BUTTONS
+=========================================================== */
+.mh-edit {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mh-edit:hover {
+  background: #0066d4;
+}
+
+.mh-delete {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mh-delete:hover {
+  background: #c72d3a;
+}
+
+/* ===========================================================
+   LOADING STATE
+=========================================================== */
+.mh-loading {
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===========================================================
+   PAGINATION
+=========================================================== */
+.mh-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.mh-pagination button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mh-pagination button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+
+.mh-pagination span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ===========================================================
+   MOBILE RESPONSIVE
+=========================================================== */
+@media (max-width: 768px) {
+  .mh-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .mh-search {
+    width: 100%;
+  }
+
+  .mh-add-btn {
+    width: 100%;
+  }
+
+  .mh-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .mh-container {
+    padding: 15px;
+  }
+
+  .mh-table {
+    min-width: 600px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .mh-search {
+    font-size: 14px;
+  }
+
+  .mh-add-btn {
+    padding: 8px 14px;
+  }
+
+  .mh-table th,
+  .mh-table td {
+    padding: 10px;
+  }
+}
+
+/* Ensure action buttons stay side-by-side */
+.mh-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+@media (max-width: 480px) {
+  .mh-actions {
+    gap: 6px;
+  }
+
+  .mh-icon-btn {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+}
+
+
+/* Force backdrop ABOVE layout and sidebar */
+/* .modal-backdrop.show {
+  z-index: 9998 !important;
+  background: rgba(0, 0, 0, 0.65) !important;
+} */
+
+/* Force modal itself above all */
+/* .modal.show {
+  z-index: 9999 !important;
+} */

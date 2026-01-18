@@ -1,0 +1,155 @@
+/* ========== LAYOUT WRAPPER ========== */
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ========== FIXED TOPBAR ========== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 65px;
+  width: 100%;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 2000;
+  box-shadow: 0px 1px 0px 0px #12203b17;
+}
+
+.hamburger {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.topbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-btn {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background: #e63946;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ========== FIXED SIDEBAR (DESKTOP) ========== */
+.sidebar {
+  width: 260px;
+  background: #fafafa;
+  color: #333;
+  height: calc(100vh - 65px);
+  padding: 20px 15px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.35s ease;
+  z-index: 1500;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sidebar-menu a {
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+  color: #20b2aa !important;
+  font-weight: 600;
+}
+
+.sidebar-menu .active {
+  color: #20b2aa !important;
+  font-weight: 600;
+}
+
+/* ========== MOBILE SIDEBAR ========== */
+.sidebar {
+  transform: translateX(0);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+.sidebar-menu i {
+  margin-right: 10px;
+}
+/* overlay when sidebar open */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1400;
+}
+
+/* ========== CONTENT ========== */
+.content {
+  flex-grow: 1;
+  margin-left: 260px;
+  margin-top: 65px;
+  padding: 20px;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  background: #fff;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide sidebar by default */
+  .sidebar {
+    transform: translateX(-260px);
+  }
+
+  /* Slide in */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Content full width */
+  .content {
+    margin-left: 0;
+  }
+}

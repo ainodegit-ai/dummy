@@ -1,0 +1,65 @@
+.trending-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.dropdown-section {
+  margin-top: 10px;
+}
+
+.dropdown-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.dropdown-header {
+  background: #f7f7f7;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.dropdown-content.open {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.btn-save {
+  margin-top: 15px;
+  width: 100%;
+  background: #0066ff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}

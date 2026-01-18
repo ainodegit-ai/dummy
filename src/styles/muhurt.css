@@ -1,0 +1,18 @@
+/* Ensure action buttons stay side-by-side */
+.mh-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+@media (max-width: 480px) {
+  .mh-actions {
+    gap: 6px;
+  }
+
+  .mh-icon-btn {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+}

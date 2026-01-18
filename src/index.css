@@ -1,0 +1,162 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Bootstrap Theme Override */
+:root {
+  /* Primary brand color */
+  --bs-primary: #20b2aa;
+  --bs-primary-rgb: 32, 178, 170;
+
+  /* Links */
+  --bs-link-color: #20b2aa;
+  --bs-link-hover-color: #1aa39c;
+
+  /* Primary button */
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #20b2aa;
+  --bs-btn-border-color: #20b2aa;
+
+  /* Hover */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1aa39c;
+  --bs-btn-hover-border-color: #1aa39c;
+
+  /* Active */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #178f88;
+  --bs-btn-active-border-color: #178f88;
+
+  /* Focus */
+  --bs-btn-focus-shadow-rgb: 32, 178, 170;
+
+  /* Disabled */
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #7fd7d2;
+  --bs-btn-disabled-border-color: #7fd7d2;
+}
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #20b2aa;
+  --bs-btn-border-color: #20b2aa;
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1aa39c;
+  --bs-btn-hover-border-color: #1aa39c;
+
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #178f88;
+  --bs-btn-active-border-color: #178f88;
+
+  --bs-btn-focus-shadow-rgb: 32, 178, 170;
+
+  --bs-btn-disabled-bg: #7fd7d2;
+  --bs-btn-disabled-border-color: #7fd7d2;
+}
+/* Base Styles */
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Avoid using * for font-size (performance + Bootstrap safety) */
+* {
+  font-family: inherit;
+}
+
+/* Fix dropdown & popover overflow issues */
+.card,
+.rounded,
+.shadow-sm {
+  overflow: visible !important;
+}
+
+/* Select fix */
+select.form-select {
+  max-width: 100%;
+}
+
+/* Optional: checkbox & radio theme */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #20b2aa;
+}
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #20b2aa;
+}
+.modal-title {
+  font-size: 16px;
+}
+.form-control {
+  padding: 8px 14px;
+  border: var(--bs-border-width) solid #bebebe;
+}
+.form-label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #000;
+}
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgb(252 252 252) !important;
+}
+.accordion-button {
+  font-weight: 600;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.color-primary {
+  color: #20b2aa;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* User container */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Avatar image */
+.avatar-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #20b2aa; /* primary color */
+  cursor: pointer;
+}
+
+/* Text container */
+.user-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+/* Username */
+.username {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* Logout link */
+.logout-link {
+  font-size: 12px;
+  color: #20b2aa;
+  cursor: pointer;
+  padding-top: 3px;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
