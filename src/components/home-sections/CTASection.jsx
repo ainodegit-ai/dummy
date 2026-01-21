@@ -46,7 +46,7 @@ export default function CTASection({ ctaData, setCtaData, loadCTA}) {
               <h4 className="fw-bold my-2">{ctaData.title}</h4>
               <p className="text-muted">{ctaData.description}</p>
               <button className="btn btn-primary">
-                {ctaData.buttonText}
+                {ctaData.button_text}
               </button>
             </div>
           </div>
@@ -97,9 +97,9 @@ export default function CTASection({ ctaData, setCtaData, loadCTA}) {
             <Form.Label>Button Text</Form.Label>
             <Form.Control
               placeholder="Enter button text"
-              value={ctaData.buttonText}
+              value={ctaData.button_text}
               onChange={(e) =>
-                setCtaData({ ...ctaData, buttonText: e.target.value })
+                setCtaData({ ...ctaData, button_text: e.target.value })
               }
             />
           </Form.Group>

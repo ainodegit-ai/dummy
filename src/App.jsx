@@ -58,6 +58,10 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Events from "./pages/Events";
 import ContactUs from "./pages/ContactUs";
+import Academics from "./pages/Academics";
+import Adminssions from "./pages/Adminssions";
+import StudentLife from "./pages/StudentLife";
+import AcademicsDetails from "./pages/AcademicsDetails";
 
 function App() {
   return (
@@ -109,31 +113,32 @@ function App() {
         />
         {/* Protected Main Modules */}
         <Route
-          path="/homas"
+          path="/academics"
           element={
             <RequireAdmin>
-              <Homas />
+              <Academics />
             </RequireAdmin>
           }
         />
 
         <Route
-          path="/muhurta"
+          path="/admissions"
           element={
             <RequireAdmin>
-              <Muhurta />
+              <Adminssions />
             </RequireAdmin>
           }
         />
 
         <Route
-          path="/vastu"
+          path="/studentlife"
           element={
             <RequireAdmin>
-              <Vastu />
+              <StudentLife />
             </RequireAdmin>
           }
         />
+        <Route path="/academicdetails/:programId" element={<AcademicsDetails />} />
 
         {/* New Sidebar Pages */}
         <Route

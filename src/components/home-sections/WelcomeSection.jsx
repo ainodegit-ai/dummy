@@ -209,7 +209,12 @@ export default function WelcomeSection({ welcomeData, setWelcomeData, loadWelcom
                   <h4 className="fw-bold">{welcomeData.title}</h4>
                   <p>{welcomeData.text1}</p>
                   <p>{welcomeData.text2}</p>
-                  <button className="btn btn-primary btn-sm">{welcomeData.buttonText}</button>
+                  {welcomeData.button_text && (
+                    <button className="btn btn-primary btn-sm">
+                      {welcomeData.button_text}
+                    </button>
+                  )}
+
                 </div>
                 <div className="col-md-4">
                   <img src={`${import.meta.env.VITE_API_URL}${welcomeData.image}`} className="img-fluid rounded" alt="" />

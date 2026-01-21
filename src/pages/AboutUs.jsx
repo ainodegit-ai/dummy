@@ -429,7 +429,7 @@ export default function AboutUs() {
 
   if (!aboutData || !whyChooseData) return null;
 
-  // 1️⃣ SAVE ABOUT MAIN (Section 1)
+  //  SAVE ABOUT MAIN (Section 1)
   const saveAboutMain = async () => {
     try {
       const formData = new FormData();
@@ -454,7 +454,7 @@ export default function AboutUs() {
     }
   };
 
-  // 2️⃣ SAVE WHY CHOOSE (Section 2)
+  //  SAVE WHY CHOOSE (Section 2)
   const saveWhyChoose = async () => {
     try {
       await api.put("/about/whychoose", {
