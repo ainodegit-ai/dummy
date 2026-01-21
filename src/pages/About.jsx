@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/About.css";
+import CallToActionSection from "./CallToActionSection";
 export default function About() {
   return (
     <>
@@ -7,28 +8,22 @@ export default function About() {
       <section className="about-intro">
         <div className="container about-grid">
           <div className="about-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWdCIc4Tgb0XL-g1zk0KTxKA6aaAxx7cnwA&s" alt="Rankridge Classroom" />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWdCIc4Tgb0XL-g1zk0KTxKA6aaAxx7cnwA&s"
+              alt="Rankridge Classroom"
+            />
           </div>
 
           <div className="about-content">
             <h2>About Rankridge Schools</h2>
             <p>
               Rankridge Schools is among the best schools in Hyderabad, offering
-              a world-class education from Pre-School to Grade 12 with IIT-JEE
-              & NEET foundation programs. Our holistic approach focuses on
+              a world-class education from Pre-School to Grade 12 with IIT-JEE &
+              NEET foundation programs. Our holistic approach focuses on
               academic excellence, leadership, and life skills.
             </p>
           </div>
         </div>
-      </section>
-
-      {/* ===== CTA STRIP ===== */}
-      <section className="about-cta">
-        <p>
-          Learn. Lead. Achieve. Enroll at Rankridge Schools and give your child
-          a world-class future.
-        </p>
-        <button>ENQUIRE NOW</button>
       </section>
 
       {/* ===== WHY CHOOSE ===== */}
@@ -44,7 +39,7 @@ export default function About() {
             items={[
               "Mindful Curriculum",
               "Safe & Supportive Environment",
-              "Celebration of Success"
+              "Celebration of Success",
             ]}
           />
 
@@ -53,7 +48,7 @@ export default function About() {
             items={[
               "Maker Studios & Innovation Labs",
               "Hands-on Projects",
-              "Arts Integration"
+              "Arts Integration",
             ]}
           />
 
@@ -62,7 +57,7 @@ export default function About() {
             items={[
               "Debates & Public Speaking",
               "Media & Digital Literacy",
-              "Multilingual Exposure"
+              "Multilingual Exposure",
             ]}
           />
 
@@ -71,7 +66,7 @@ export default function About() {
             items={[
               "Self-paced Learning Paths",
               "Collaborative Group Learning",
-              "Project Portfolios"
+              "Project Portfolios",
             ]}
           />
 
@@ -80,7 +75,7 @@ export default function About() {
             items={[
               "Expert Mentorship",
               "Targeted Practice",
-              "Concept-based Learning"
+              "Concept-based Learning",
             ]}
           />
 
@@ -89,7 +84,7 @@ export default function About() {
             items={[
               "Profile Building",
               "Admissions Guidance",
-              "Strong Alumni Network"
+              "Strong Alumni Network",
             ]}
           />
 
@@ -98,7 +93,7 @@ export default function About() {
             items={[
               "Public Speaking Workshops",
               "Decision Making Skills",
-              "Entrepreneurial Mindset"
+              "Entrepreneurial Mindset",
             ]}
           />
         </div>
@@ -131,6 +126,7 @@ export default function About() {
           integrity, and responsibility.
         </p>
       </section>
+      <CallToActionSection />
     </>
   );
 }

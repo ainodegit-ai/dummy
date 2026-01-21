@@ -140,7 +140,6 @@ body {
   }
 }
 
-
 /* ================= MEDIA BLOCK ================= */
 
 .media-block img {
@@ -166,7 +165,9 @@ body {
 .media-show {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 /* Mobile behavior */
