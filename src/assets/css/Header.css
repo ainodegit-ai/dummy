@@ -1,0 +1,209 @@
+/* ================================
+   HEADER BASE
+================================ */
+.site-header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+/* ================================
+   LOGO
+================================ */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 46px;
+  object-fit: contain;
+}
+
+/* ================================
+   DESKTOP MENU
+================================ */
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Links + Buttons */
+.main-menu a,
+.menu-btn {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1f2937;
+  background: none;
+  border: none;
+  padding: 6px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Underline animation */
+.main-menu a::after,
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #1ca39e;
+  transition: width 0.3s ease;
+}
+
+.main-menu a:hover::after,
+.menu-btn:hover::after,
+.main-menu a.active::after {
+  width: 100%;
+}
+
+/* Active state */
+.main-menu a.active {
+  color: #1ca39e;
+}
+
+/* ================================
+   DROPDOWN (Academics – KEEP LOGIC)
+================================ */
+.menu-item {
+  position: relative;
+}
+
+/* Dropdown panel */
+.drop-menu {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  min-width: 240px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+  padding: 10px 0;
+
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* OPEN STATE (JS controls this) */
+.menu-item.open .drop-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Dropdown links */
+.drop-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.drop-menu a:hover {
+  background: #f0fbfa;
+  color: #1ca39e;
+}
+
+/* ================================
+   REGISTER / ENQUIRE BUTTON
+================================ */
+.register-btn {
+  background: #1ca39e;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.register-btn:hover {
+  background: #168f8a;
+}
+
+/* ================================
+   HAMBURGER (MOBILE)
+================================ */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1f2937;
+}
+
+/* ================================
+   MOBILE NAV
+================================ */
+.mobile-nav {
+  position: absolute;
+  top: 78px;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Mobile links */
+.mobile-nav a,
+.mobile-nav button {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  text-align: left;
+}
+
+/* Mobile submenu */
+.mobile-submenu {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 991px) {
+  .main-menu,
+  .register-btn {
+    display: none;
+  }
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+}

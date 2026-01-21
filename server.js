@@ -1,3 +1,6 @@
+
+// server.js
+
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -7,6 +10,9 @@ const authRoutes = require("./routes/auth.routes");
 const homeRoutes = require("./routes/home.routes");
 const aboutRoutes = require("./routes/about.routes");
 const eventsRoutes = require("./routes/events.routes");
+const academicsRoutes = require("./routes/academics.routes");
+const db = require("./db");
+const contactRoutes = require("./routes/contact.routes");
 
 const app = express();
 
@@ -26,8 +32,18 @@ app.use("/api/about", aboutRoutes);
 
 app.use("/api/events", eventsRoutes);
 
-app.use("/api/contact", require("./routes/contact.routes"));
+app.use("/api/contact", contactRoutes);
 
+app.use("/api/academics", academicsRoutes);
+// app.use("/uploads", express.static("uploads"));
+
+
+const admissionsRoutes = require("./routes/admissions.routes");
+
+app.use("/api/admissions", admissionsRoutes);
+
+const studentLifeRoutes = require("./routes/studentlife.routes");
+app.use("/api/studentlife", studentLifeRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
