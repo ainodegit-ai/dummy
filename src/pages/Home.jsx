@@ -84,7 +84,12 @@ function Home() {
       </section>
 
       <HomeHeroSection />
-      <HomeAboutUsSection />
+      <section className="pt80 pb80 background-img">
+        <div className="container">
+          <HomeAboutUsSection />
+        </div>
+      </section>
+
       <AdmissionEnquirySection />
       <ActivitySkillSection />
       <AcademicTimelineSection />

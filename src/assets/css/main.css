@@ -1511,7 +1511,9 @@ footer li a {
 .primary-color {
   color: #20b2aa;
 }
-
+.text-primary {
+  color: #20b2aa !important;
+}
 .accordion-button:not(.collapsed) {
   color: #fff;
   background-color: #20b2aa;
@@ -2581,4 +2583,136 @@ footer li a {
 .gallery-carousel .item:hover .gallery-carousel-content,
 .gallery-carousel .item:hover:after {
   opacity: 1;
+}
+.breadcrumb {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.breadcrumb-img {
+  background: url("/src/assets/img/schoolbg.jpg") no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  position: relative;
+}
+/* Overlay */
+.breadcrumb-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Make sure content stays above overlay */
+.breadcrumb-img > * {
+  position: relative;
+  z-index: 2;
+}
+.breadcrumb li {
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+  color: #d74d52;
+}
+
+.breadcrumb li a {
+  color: #192836;
+}
+
+.breadcrumb li:hover a {
+  color: #d74d52;
+}
+
+.breadcrumb li:after {
+  content: "\f135";
+  position: absolute;
+  font-family: "bootstrap-icons";
+  font-size: 10px;
+  top: 5px;
+  right: -22px;
+  color: #192836;
+}
+
+.breadcrumb li:last-child:after {
+  display: none;
+}
+
+.breadcrumb h1,
+.breadcrumb ul {
+  z-index: 2;
+  position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+  .breadcrumb::after {
+    right: 40vw;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .breadcrumb::after {
+    right: 25vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .breadcrumb::after {
+    display: none;
+  }
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.feature-card-modern {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 28px 24px;
+  box-shadow: 0px 28px 65px 0px rgba(188, 188, 188, 0.25) !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.feature-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(32, 178, 170, 0.12);
+  color: #20b2aa;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.feature-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list-items li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.feature-list-items i {
+  color: #20b2aa;
+  font-size: 14px;
+}
+.shadow {
+  box-shadow: 0px 28px 65px 0px rgba(188, 188, 188, 0.25) !important;
 }
