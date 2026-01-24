@@ -1,0 +1,106 @@
+/* HERO */
+.primary-hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.primary-hero h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.primary-hero-card {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.primary-hero-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CTA */
+.primary-cta {
+  background: #1ca39e;
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+.primary-cta button {
+  margin-left: 12px;
+  padding: 8px 18px;
+  background: #0c3c32;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+/* INTRO */
+.primary-intro {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.primary-intro p {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* FEATURES */
+.primary-features {
+  background: #1ca39e;
+  padding: 60px 20px;
+}
+
+.primary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.primary-card h4 {
+  margin-bottom: 10px;
+}
+
+.primary-card ul {
+  padding-left: 18px;
+}
+
+/* ADMISSIONS */
+.primary-admissions {
+  background: #1ca39e;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* FAQ */
+.primary-faq {
+  padding: 60px 20px;
+  background: #f5fbfa;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .primary-hero-card {
+    grid-template-columns: 1fr;
+  }
+}

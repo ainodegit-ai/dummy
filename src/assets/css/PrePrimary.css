@@ -1,0 +1,104 @@
+.pre-hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.pre-hero h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.pre-hero-card {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.pre-hero-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CTA */
+.pre-cta {
+  background: #1ca39e;
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+.pre-cta button {
+  margin-left: 12px;
+  padding: 8px 18px;
+  background: #0c3c32;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+/* FEATURES */
+.pre-features {
+  background: #1ca39e;
+  padding: 60px 20px;
+}
+
+.pre-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.pre-card h4 {
+  margin-bottom: 10px;
+}
+
+.pre-card ul {
+  padding-left: 18px;
+}
+
+/* TRUST / FOUNDATION / ADMISSIONS */
+.pre-trust,
+.pre-foundation,
+.pre-admissions {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.pre-admissions {
+  background: #1ca39e;
+  color: #fff;
+}
+
+.pre-admissions .note {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* FAQ */
+.pre-faq {
+  padding: 60px 20px;
+  background: #f5fbfa;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pre-hero-card {
+    grid-template-columns: 1fr;
+  }
+}
