@@ -15,23 +15,21 @@ export default function About() {
         <div className="container">
           <div className="row">
             <div className="col">
-              <h1>Who we are</h1>
+              <h1>About Us</h1>
 
               <ul>
                 <li>
                   <Link to="/">Home</Link>
                 </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>Who we are</li>
+
+                <li>About Us</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="pt80 pb80">
+      <section className="pt60 pb60">
         <div className="container">
           <div className="row align-items-center">
             {/* LEFT : Image */}
@@ -82,7 +80,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="background-img pt80 pb80">
+      <section className="background-img pt60 pb60">
         <div className="container">
           {/* Section Title */}
           <div className="section-title">
@@ -168,7 +166,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="pt80 pb80">
+      <section className="pt60 pb60">
         <div className="container">
           <div className="row g-4 text-center">
             {/* MISSION */}
@@ -226,7 +224,7 @@ export default function About() {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="col-lg-6 text-center mt-4 mt-lg-0">
+            <div className="col-lg-6 mt-4 mt-lg-0">
               <AdmissionEnquiryForm />
             </div>
           </div>

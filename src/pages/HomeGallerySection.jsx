@@ -21,7 +21,7 @@ export default function HomeGallerySection() {
       </div>
 
       {/* Gallery Carousel */}
-      <div className="gallery-carousel owl-carousel owl-theme mt-4">
+      <div className="gallery-carousel gallery-carousel1 owl-carousel owl-theme mt-4">
         {/* Item 1 */}
         <div className="item">
           <img src={gallery1} alt="Learning Beyond Classrooms" />

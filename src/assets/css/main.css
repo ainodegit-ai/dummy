@@ -1955,7 +1955,6 @@ footer li a {
 .image-grid {
   position: relative;
   width: 100%;
-  min-height: 480px;
 }
 
 .blob {
@@ -2585,8 +2584,9 @@ footer li a {
   opacity: 1;
 }
 .breadcrumb {
-  padding: 80px 0;
+  padding: 50px 0;
   overflow: hidden;
+  margin: 0;
 }
 
 .breadcrumb-img {
@@ -2715,4 +2715,28 @@ footer li a {
 }
 .shadow {
   box-shadow: 0px 28px 65px 0px rgba(188, 188, 188, 0.25) !important;
+}
+.tick-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tick-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+.tick-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #20b2aa; /* your primary color */
+  font-weight: 700;
+}
+.admissions-new h2 {
+  font-size: 24px;
 }

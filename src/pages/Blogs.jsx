@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/Blogs.css";
-
+import { Link } from "react-router-dom";
+import HomeNewsSection from "./HomeNewsSection";
 const blogs = [
   {
     id: 1,
@@ -34,27 +35,26 @@ const blogs = [
 
 function Blogs() {
   return (
-    <section className="blogs-page">
-      <div className="container">
-        <h1 className="blogs-title">Our Blogs</h1>
-        <p className="blogs-subtitle">
-          Insights, updates, and stories from Rankridge Schools
-        </p>
+    <>
+      <section className="breadcrumb breadcrumb-img">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h1>Blog</h1>
 
-        <div className="blogs-grid">
-          {blogs.map((blog) => (
-            <div className="blog-card" key={blog.id}>
-              <div className="blog-content">
-                <span className="blog-date">{blog.date}</span>
-                <h3>{blog.title}</h3>
-                <p>{blog.excerpt}</p>
-                <button className="read-more-btn">Read More</button>
-              </div>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+
+                <li>Blog</li>
+              </ul>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <HomeNewsSection />
+    </>
   );
 }
 

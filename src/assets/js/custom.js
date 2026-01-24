@@ -59,7 +59,7 @@
       items: 1,
     });
 
-    $(".gallery-carousel").owlCarousel({
+    $(".gallery-carousel1").owlCarousel({
       loop: true,
       autoplay: true,
       smartSpeed: 1000,
