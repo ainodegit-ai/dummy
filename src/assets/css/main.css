@@ -2615,7 +2615,7 @@ footer li a {
   display: inline-block;
   margin-right: 30px;
   position: relative;
-  color: #d74d52;
+  color: #20b2aa;
 }
 
 .breadcrumb li a {
@@ -2739,4 +2739,20 @@ footer li a {
 }
 .admissions-new h2 {
   font-size: 24px;
+}
+.contact-info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-info-item i {
+  font-size: 20px;
+  color: #20b2aa;
+  margin-top: 4px;
+}
+
+.contact-info-item h6 {
+  margin-bottom: 4px;
+  font-weight: 600;
 }
