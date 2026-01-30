@@ -5,6 +5,7 @@ import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
 import MediaBlock from "../../components/ui/MediaBlock";
 import FaqItem from "../../components/ui/FaqItem";
+import CallToActionSection from "../CallToActionSection";
 
 function AcademicsTemplate({ data }) {
   return (
@@ -13,23 +14,12 @@ function AcademicsTemplate({ data }) {
       <Section>
         <h1 className="hero-title">{data.hero.title}</h1>
 
-        <MediaBlock
-          image={data.hero.image}
-          alt={data.hero.alt}
-        >
+        <MediaBlock image={data.hero.image} alt={data.hero.alt}>
           <h2>{data.hero.heading}</h2>
           {data.hero.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </MediaBlock>
-      </Section>
-
-      {/* ===== CTA ===== */}
-      <Section variant="primary">
-        <div style={{ textAlign: "center" }}>
-          <p>{data.cta.text}</p>
-          <Button>{data.cta.button}</Button>
-        </div>
       </Section>
 
       {/* ===== INTRO ===== */}
@@ -56,9 +46,7 @@ function AcademicsTemplate({ data }) {
 
       {/* ===== ADMISSIONS ===== */}
       <Section variant="primary">
-        <h3 style={{ textAlign: "center" }}>
-          {data.admissions.title}
-        </h3>
+        <h3 style={{ textAlign: "center" }}>{data.admissions.title}</h3>
         <p style={{ textAlign: "center", maxWidth: "900px", margin: "auto" }}>
           {data.admissions.text}
         </p>
@@ -71,13 +59,10 @@ function AcademicsTemplate({ data }) {
         </h3>
 
         {data.faqs.map((faq, i) => (
-          <FaqItem
-            key={i}
-            question={faq.q}
-            answer={faq.a}
-          />
+          <FaqItem key={i} question={faq.q} answer={faq.a} />
         ))}
       </Section>
+      <CallToActionSection />
     </>
   );
 }

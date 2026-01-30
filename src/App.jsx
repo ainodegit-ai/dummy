@@ -13,7 +13,7 @@ import PrePrimary from "./pages/Academics/PrePrimary";
 import Primary from "./pages/Academics/Primary";
 import CBSE from "./pages/Academics/CBSE";
 import ContactUs from "./pages/ContactUs";
-
+import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   return (
@@ -23,14 +23,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-         <Route path="/student-life" element={<StudentLife />} />
-         <Route path="/admissions" element={<Admissions />} />
-         <Route path="/blog" element={<Blogs />} />
+        <Route path="/student-life" element={<StudentLife />} />
+        <Route path="/admissions" element={<Admissions />} />
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blogdetails" element={<BlogDetails />} />
         <Route path="/events" element={<Events />} />
         <Route path="/register" element={<Register />} />
         <Route path="/academics/pre-primary" element={<PrePrimary />} />
-         <Route path="/academics/primary" element={<Primary />} />
-         <Route path="/academics/cbse" element={<CBSE />} />
+        <Route path="/academics/primary" element={<Primary />} />
+        <Route path="/academics/cbse" element={<CBSE />} />
         <Route path="/enquire" element={<EnquireNow />} />
         <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
